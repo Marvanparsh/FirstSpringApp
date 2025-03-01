@@ -22,6 +22,11 @@ public class HelloRestController {
         return "Hello " + name + "1";
     }
 
+    // curl localhost:8080/hello/param/Naxayan -w "\n"
+    @GetMapping("/param/{name}")
+    public String sayHelloParam(@PathVariable String name) {
+        return "Hello " + name + "!";
+    }
 
 
 }
